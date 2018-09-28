@@ -19,12 +19,14 @@ export class HotelComponent {
 
 	onClick(){
 		if(this.task.id == 0){
-			this.tasks.push({id: (new Date()).getTime(), name: this.task.name});
+			if(this.task.name != ''){
+				this.tasks.push({id: (new Date()).getTime(), name: this.task.name});
+			}
 		}
 	}
 	onEnter(event){
-		if(this.task.id == 0 && event.key === "Enter"){
-			this.tasks.push({id: (new Date()).getTime(), name: this.task.name});
+		if(event.key === "Enter"){
+			this.onClick();
 		}
 	}
 
