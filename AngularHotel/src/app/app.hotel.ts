@@ -9,11 +9,24 @@ import { Component } from '@angular/core';
 })
 
 export class HotelComponent {
-	task: string;
+	task = {
+		name: '',
+		id: 0
+	};
 	tasks = [];
 
 	onClick(){
-		this.tasks.push({name: this.task});
-		this.task = '';
+		if(this.task.id == 0){
+			this.tasks.push({id: (new Date()).getTime(), name: this.task.name});
+		}
+	}
+
+	onDelete(item){
+		for(var i = 0; i < this.tasks.length; i++){
+			if(item.id == this.tasks[i].id){
+				this.tasks.splice(i,1);
+				break;
+			}
+		}
 	}
 }
