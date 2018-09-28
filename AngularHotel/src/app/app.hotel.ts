@@ -4,7 +4,9 @@ import { Component } from '@angular/core';
 	selector: 'app-hotel',
 	templateUrl: './app.hotel.html',
 	styleUrls: [
-		'../assets/css/bootstrap.min.css'
+		'../assets/css/bootstrap.min.css',
+		'./app.hotel.css'
+
 	]
 })
 
@@ -19,6 +21,15 @@ export class HotelComponent {
 		if(this.task.id == 0){
 			this.tasks.push({id: (new Date()).getTime(), name: this.task.name});
 		}
+	}
+	onEnter(event){
+		if(this.task.id == 0 && event.key === "Enter"){
+			this.tasks.push({id: (new Date()).getTime(), name: this.task.name});
+		}
+	}
+
+	removeAll(){
+		this.tasks = [];
 	}
 
 	onDelete(item){

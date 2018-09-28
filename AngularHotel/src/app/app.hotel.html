@@ -1,24 +1,32 @@
-<div>
+<div class="container">
+	
 	<h2> Hotel Lists </h2>
 
 	<div class = "row">
 		<div class="col-xs-6 col-md-4">
 			<div class="input-group">
-				<input type="text" class="form-control" placeholder="Enter hotel name" id="txtSearch" [(ngModel)]="task.name"/>
+				<input type="text" class="form-control" placeholder="Enter hotel name" id="txtSearch" (keydown)="onEnter($event)" [(ngModel)]="task.name"/>
 				<div class="input-group-btn">
 					<button class="btn btn-primary" type="button" (click)="onClick()">
 					<span class="glyphicon glyphicon-ok"></span>
 					</button>
+					
 				</div>
 			</div>
 		</div>
+		
+		<div class="col-xs-6 col-md-8">
+			<button class="btn btn-danger removeAll" type="button" (click)="removeAll()">
+						<span> Remove all hotels </span>
+			</button>
+		</div>
 	</div>
 
-<br />
+	
 
 	<ul class="list-group">
 		<li *ngFor="let task of tasks" class="list-group-item">
-			<span class="glyphicon glyphicon-remove" (click)="onDelete(task)" style="color:red"></span>
+			<span class="glyphicon glyphicon-remove cross" (click)="onDelete(task)"></span>
 			<span> {{task.name}} </span>
 		</li>
 	</ul>
