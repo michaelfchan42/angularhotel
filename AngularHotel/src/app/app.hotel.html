@@ -18,7 +18,7 @@
 
 	<ul class="list-group">
 		<li *ngFor="let task of tasks" class="list-group-item">
-			<span class="glyphicon glyphicon-remove" (click)="onDelete(task)" style="color:red"></span>
+			<span class="glyphicon glyphicon-remove cross" (click)="onDelete(task)"></span>
 			<span> {{task.name}} </span>
 		</li>
 	</ul>

@@ -1,0 +1,13 @@
+.list-group-item:hover{
+	background: #dedede;
+
+}
+
+.cross:hover {
+	font-size: 1.2em;
+	color: #8B0000;
+}
+
+.cross {
+	color: red;
+}

@@ -4,7 +4,9 @@ import { Component } from '@angular/core';
 	selector: 'app-hotel',
 	templateUrl: './app.hotel.html',
 	styleUrls: [
-		'../assets/css/bootstrap.min.css'
+		'../assets/css/bootstrap.min.css',
+		'./app.hotel.css'
+
 	]
 })
 
