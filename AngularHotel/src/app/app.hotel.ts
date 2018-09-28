@@ -20,6 +20,11 @@ export class HotelComponent {
 			this.tasks.push({id: (new Date()).getTime(), name: this.task.name});
 		}
 	}
+	onEnter(event){
+		if(this.task.id == 0 && event.key === "Enter"){
+			this.tasks.push({id: (new Date()).getTime(), name: this.task.name});
+		}
+	}
 
 	onDelete(item){
 		for(var i = 0; i < this.tasks.length; i++){
