@@ -3,6 +3,10 @@
 
 }
 
+.list-group{
+	padding-top: 10px;
+}
+
 .cross:hover {
 	font-size: 1.2em;
 	color: #8B0000;
@@ -11,3 +15,8 @@
 .cross {
 	color: red;
 }
+
+.removeAll {
+	margin-left: 75%;
+}
+

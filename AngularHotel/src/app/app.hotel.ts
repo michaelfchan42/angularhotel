@@ -28,6 +28,10 @@ export class HotelComponent {
 		}
 	}
 
+	removeAll(){
+		this.tasks = [];
+	}
+
 	onDelete(item){
 		for(var i = 0; i < this.tasks.length; i++){
 			if(item.id == this.tasks[i].id){
